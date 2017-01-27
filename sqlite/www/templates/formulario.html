@@ -1,0 +1,37 @@
+<ion-view view-title="Formulario">
+    <ion-content ng-controller="FormularioCtrl">
+        <div class="table1">
+            <form>
+                <label class="item item-input">
+                    <input type="text" placeholder="DNI" ng-model="student.dni">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="NOMBRE" ng-model="student.nombre">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="APELLIDO" ng-model="student.apellido">
+                </label>
+            </form>
+            <button class="button button-block button-positive" ng-click="insert(student)">Insertar</button>
+        </div>
+
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="load()">Cargar datos</button>
+
+            <div class="row">
+                <div class="col col-40">DNI</div>
+                <div class="col col-40">NOMBRE</div>
+                <div class="col col-40">APELLIDO</div>
+            </div>
+            <div class="row" ng-repeat="student in donnees">
+                <div class="col col-40">{{student.dni}}</div>
+                <div class="col col-40">{{student.nombre}}</div>
+                <div class="col col-40">{{student.apellido}}</div>
+            </div>
+
+
+        </div>
+
+          
+    </ion-content>
+</ion-view>
